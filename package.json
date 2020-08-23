@@ -1,5 +1,5 @@
 {
-  "name": "@wasm/empty_c",
+  "name": "@wasm/helloworld",
   "description": "",
   "version": "1.0.0",
   "scripts": {
@@ -12,8 +12,8 @@
     "typescript": "~2.7.2"
   },
   "wasmStudio": {
-    "name": "Empty C Project",
-    "description": "# Empty C Project",
+    "name": "Hello World",
+    "description": "Hello World program in wasm",
     "icon": "c-lang-file-icon"
   }
 }
