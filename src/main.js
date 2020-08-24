@@ -12,11 +12,13 @@
 	const { instance } = await WebAssembly.instantiateStreaming(codePromise);
 
 	const buffer = new Uint8Array(instance.exports.memory.buffer);
-	const helloWorldPointer = instance.exports.helloWorld();
 
-	let str = "";
+	// helloWorld WebAssembly function is just Javascript wrapper that represent WebAssembly function `helloWorld` in javascript. 
+	const helloWorldPtr = instance.exports.helloWorld();
 
-	for (let i = helloWorldPointer; buffer[i]; i++) {
+	let str = '';
+
+	for (let i = helloWorldPtr; buffer[i]; i++) {
 		str += String.fromCharCode(buffer[i]);
 	}
 
